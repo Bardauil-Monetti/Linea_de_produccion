@@ -52,11 +52,11 @@ void loop() {
       for(int j = 0; j < 7; j++){
         digitalWrite(pinesDisplay[j], display[i][j]);
       }
+      if(flag[3]) {
+        finished = true;
+        tPrevio = millis();
+      }
       flag[i] = false;
-    }
-    if(flag[3]) {
-      finished = true;
-      tPrevio = millis();
     }
   }
   tActual = millis();
